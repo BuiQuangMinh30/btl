@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_QuanLyBanHang.BaoCaoReport;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,14 +86,14 @@ namespace BTL_QuanLyBanHang
 
         private void mnuBCHangTon_Click(object sender, EventArgs e)
         {
-            frmBaoCaoHangTon frmBCHT = new frmBaoCaoHangTon();
-            frmBCHT.MdiParent = this;
-            frmBCHT.Show();
+            //frmBaoCaoHangTon frmBCHT = new frmBaoCaoHangTon();
+            //frmBCHT.MdiParent = this;
+            //frmBCHT.Show();
         }
 
         private void mnuQuanLy_Click(object sender, EventArgs e)
         {
-            frmBaoCaoQLHD frmBaoCao = new frmBaoCaoQLHD();
+            frmBaoCaoHoaDon frmBaoCao = new frmBaoCaoHoaDon();
             frmBaoCao.MdiParent = this;
             frmBaoCao.Show();
         }
@@ -100,6 +101,13 @@ namespace BTL_QuanLyBanHang
         private void mnuBCKhachHang_Click(object sender, EventArgs e)
         {
             frmBaoCaoKhachHang frmBaoCao = new frmBaoCaoKhachHang();
+            frmBaoCao.MdiParent = this;
+            frmBaoCao.Show();
+        }
+
+        private void mnuTimKiemHoaDon_Click(object sender, EventArgs e)
+        {
+            frmTimKiemHoaDon frmBaoCao = new frmTimKiemHoaDon();
             frmBaoCao.MdiParent = this;
             frmBaoCao.Show();
         }

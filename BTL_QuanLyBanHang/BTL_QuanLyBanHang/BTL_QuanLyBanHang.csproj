@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoReport\frmBaoCaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoReport\frmBaoCaoHoaDon.Designer.cs">
+      <DependentUpon>frmBaoCaoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Functions.cs" />
     <Compile Include="DataSet\dsBaoCaoQuanLy.cs">
       <DependentUpon>dsBaoCaoQuanLy.xsd</DependentUpon>
@@ -71,23 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBaoCaoHangTon.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmBaoCaoHangTon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBaoCaoHangTon.Designer.cs">
-      <DependentUpon>frmBaoCaoHangTon.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmBaoCaoKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBaoCaoKhachHang.Designer.cs">
       <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBaoCaoQLHD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBaoCaoQLHD.Designer.cs">
-      <DependentUpon>frmBaoCaoQLHD.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDanhMucHangHoa.cs">
       <SubType>Form</SubType>
@@ -125,6 +119,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTimKiemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiemHoaDon.Designer.cs">
+      <DependentUpon>frmTimKiemHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmTimKiemKhachHang.cs">
@@ -139,10 +139,10 @@
       <DependentUpon>ReportHangTon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CRqlhd.cs">
+    <Compile Include="Report\ReportChiTietHoaDon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CRqlhd.rpt</DependentUpon>
+      <DependentUpon>ReportChiTietHoaDon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ReportKhachHang.cs">
@@ -151,14 +151,11 @@
       <DependentUpon>ReportKhachHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="frmBaoCaoHangTon.resx">
-      <DependentUpon>frmBaoCaoHangTon.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCaoReport\frmBaoCaoHoaDon.resx">
+      <DependentUpon>frmBaoCaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoKhachHang.resx">
       <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBaoCaoQLHD.resx">
-      <DependentUpon>frmBaoCaoQLHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhMucChatLieu.resx">
       <DependentUpon>frmDanhMucChatLieu.cs</DependentUpon>
@@ -195,9 +192,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportHangTon.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CRqlhd.rpt">
+    <EmbeddedResource Include="Report\ReportChiTietHoaDon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CRqlhd.cs</LastGenOutput>
+      <LastGenOutput>ReportChiTietHoaDon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportKhachHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

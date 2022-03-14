@@ -16,14 +16,14 @@ namespace BTL_QuanLyBanHang.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CRqlhd : ReportClass {
+    public class ReportChiTietHoaDon : ReportClass {
         
-        public CRqlhd() {
+        public ReportChiTietHoaDon() {
         }
         
         public override string ResourceName {
             get {
-                return "CRqlhd.rpt";
+                return "ReportChiTietHoaDon.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace BTL_QuanLyBanHang.Report {
         
         public override string FullResourceName {
             get {
-                return "BTL_QuanLyBanHang.Report.CRqlhd.rpt";
+                return "BTL_QuanLyBanHang.Report.ReportChiTietHoaDon.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace BTL_QuanLyBanHang.Report {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCRqlhd : Component, ICachedReport {
+    public class CachedReportChiTietHoaDon : Component, ICachedReport {
         
-        public CachedCRqlhd() {
+        public CachedReportChiTietHoaDon() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace BTL_QuanLyBanHang.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CRqlhd rpt = new CRqlhd();
+            ReportChiTietHoaDon rpt = new ReportChiTietHoaDon();
             rpt.Site = this.Site;
             return rpt;
         }

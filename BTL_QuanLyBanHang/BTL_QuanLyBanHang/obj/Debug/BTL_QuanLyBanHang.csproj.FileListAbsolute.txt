@@ -60,7 +60,6 @@ E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\stdole.dll
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.AssemblyReference.cache
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.ResolveComReference.cache
-E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoHangTon.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucChatLieu.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucHangHoa.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucKhachHang.resources
@@ -74,5 +73,5 @@ E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.Co
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.CopyComplete
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.exe
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.pdb
-E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoQLHD.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoKhachHang.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.BaoCaoReport.frmBaoCaoHoaDon.resources

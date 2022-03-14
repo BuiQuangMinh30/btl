@@ -37,7 +37,6 @@ namespace BTL_QuanLyBanHang
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbGioitinh = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mtbDienThoaiNV = new System.Windows.Forms.MaskedTextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@ namespace BTL_QuanLyBanHang
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgrNhanVien = new System.Windows.Forms.DataGridView();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrNhanVien)).BeginInit();
@@ -140,7 +140,7 @@ namespace BTL_QuanLyBanHang
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbGioitinh);
+            this.panel2.Controls.Add(this.txtGioiTinh);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.mtbDienThoaiNV);
             this.panel2.Controls.Add(this.txtTenNV);
@@ -159,18 +159,6 @@ namespace BTL_QuanLyBanHang
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2133, 355);
             this.panel2.TabIndex = 1;
-            // 
-            // cbGioitinh
-            // 
-            this.cbGioitinh.AutoSize = true;
-            this.cbGioitinh.Checked = true;
-            this.cbGioitinh.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGioitinh.Location = new System.Drawing.Point(339, 227);
-            this.cbGioitinh.Name = "cbGioitinh";
-            this.cbGioitinh.Size = new System.Drawing.Size(112, 36);
-            this.cbGioitinh.TabIndex = 7;
-            this.cbGioitinh.Text = "Nam";
-            this.cbGioitinh.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -300,6 +288,15 @@ namespace BTL_QuanLyBanHang
             this.dgrNhanVien.TabIndex = 2;
             this.dgrNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrNhanVien_CellClick);
             // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(339, 225);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(420, 38);
+            this.txtGioiTinh.TabIndex = 8;
+            //this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // frmDanhMucNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -342,7 +339,7 @@ namespace BTL_QuanLyBanHang
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.CheckBox cbGioitinh;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtGioiTinh;
     }
 }

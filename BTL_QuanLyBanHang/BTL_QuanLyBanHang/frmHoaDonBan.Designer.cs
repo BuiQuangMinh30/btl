@@ -35,6 +35,7 @@ namespace BTL_QuanLyBanHang
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThemKH = new System.Windows.Forms.Button();
             this.cboMaKhach = new System.Windows.Forms.ComboBox();
             this.mtbDienThoaiKh = new System.Windows.Forms.MaskedTextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@ namespace BTL_QuanLyBanHang
             this.btnXoaHD = new System.Windows.Forms.Button();
             this.btnLuuHD = new System.Windows.Forms.Button();
             this.btnThemHD = new System.Windows.Forms.Button();
-            this.btnThemKH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -174,6 +174,16 @@ namespace BTL_QuanLyBanHang
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
+            // 
+            // btnThemKH
+            // 
+            this.btnThemKH.Location = new System.Drawing.Point(1812, 18);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.Size = new System.Drawing.Size(222, 63);
+            this.btnThemKH.TabIndex = 20;
+            this.btnThemKH.Text = "Thêm khách hàng";
+            this.btnThemKH.UseVisualStyleBackColor = true;
+            this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
             // 
             // cboMaKhach
             // 
@@ -620,16 +630,6 @@ namespace BTL_QuanLyBanHang
             this.btnThemHD.UseVisualStyleBackColor = true;
             this.btnThemHD.Click += new System.EventHandler(this.btnThemHD_Click);
             // 
-            // btnThemKH
-            // 
-            this.btnThemKH.Location = new System.Drawing.Point(1812, 18);
-            this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(222, 63);
-            this.btnThemKH.TabIndex = 20;
-            this.btnThemKH.Text = "Thêm khách hàng";
-            this.btnThemKH.UseVisualStyleBackColor = true;
-            this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
-            // 
             // frmHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -640,6 +640,8 @@ namespace BTL_QuanLyBanHang
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmHoaDonBan";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hóa Đơn Bán ";
             this.Load += new System.EventHandler(this.frmHoaDonBan_Load);
             this.panel1.ResumeLayout(false);
@@ -681,7 +683,6 @@ namespace BTL_QuanLyBanHang
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.ComboBox cboMaNV;
         private System.Windows.Forms.DateTimePicker dtpNgayBan;
-        private System.Windows.Forms.TextBox txtMaHDBan;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.MaskedTextBox mtbDienThoaiKh;
@@ -712,5 +713,6 @@ namespace BTL_QuanLyBanHang
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.ComboBox cboMaKhach;
         private System.Windows.Forms.Button btnThemKH;
+        public System.Windows.Forms.TextBox txtMaHDBan;
     }
 }

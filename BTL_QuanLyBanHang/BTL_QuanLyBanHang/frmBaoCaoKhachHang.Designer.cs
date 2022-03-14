@@ -32,13 +32,13 @@ namespace BTL_QuanLyBanHang
             this.panel1 = new System.Windows.Forms.Panel();
             this.crvKhachHang = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.btnTimTxt = new System.Windows.Forms.Button();
             this.cbTenKhach = new System.Windows.Forms.ComboBox();
             this.btnTimKh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.btnTimTxt = new System.Windows.Forms.Button();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,32 @@ namespace BTL_QuanLyBanHang
             this.panel2.Size = new System.Drawing.Size(1571, 144);
             this.panel2.TabIndex = 6;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 32);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "hoặc SDT";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(172, 88);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(297, 38);
+            this.txtSDT.TabIndex = 10;
+            // 
+            // btnTimTxt
+            // 
+            this.btnTimTxt.Location = new System.Drawing.Point(497, 27);
+            this.btnTimTxt.Name = "btnTimTxt";
+            this.btnTimTxt.Size = new System.Drawing.Size(142, 102);
+            this.btnTimTxt.TabIndex = 9;
+            this.btnTimTxt.Text = "Tìm";
+            this.btnTimTxt.UseVisualStyleBackColor = true;
+            this.btnTimTxt.Click += new System.EventHandler(this.btnTimTxt_Click);
+            // 
             // cbTenKhach
             // 
             this.cbTenKhach.FormattingEnabled = true;
@@ -115,32 +141,7 @@ namespace BTL_QuanLyBanHang
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(297, 38);
             this.txtMaKH.TabIndex = 5;
-            // 
-            // btnTimTxt
-            // 
-            this.btnTimTxt.Location = new System.Drawing.Point(497, 27);
-            this.btnTimTxt.Name = "btnTimTxt";
-            this.btnTimTxt.Size = new System.Drawing.Size(142, 102);
-            this.btnTimTxt.TabIndex = 9;
-            this.btnTimTxt.Text = "Tìm";
-            this.btnTimTxt.UseVisualStyleBackColor = true;
-            this.btnTimTxt.Click += new System.EventHandler(this.btnTimTxt_Click);
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(172, 88);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(297, 38);
-            this.txtSDT.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 32);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "hoặc SDT";
+            this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
             // 
             // frmBaoCaoKhachHang
             // 

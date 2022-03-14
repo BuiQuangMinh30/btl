@@ -194,19 +194,20 @@ namespace BTL_QuanLyBanHang
             // mnuTimKiemHoaDon
             // 
             this.mnuTimKiemHoaDon.Name = "mnuTimKiemHoaDon";
-            this.mnuTimKiemHoaDon.Size = new System.Drawing.Size(343, 54);
+            this.mnuTimKiemHoaDon.Size = new System.Drawing.Size(448, 54);
             this.mnuTimKiemHoaDon.Text = "Hóa đơn";
+            this.mnuTimKiemHoaDon.Click += new System.EventHandler(this.mnuTimKiemHoaDon_Click);
             // 
             // mnuTimKiemHang
             // 
             this.mnuTimKiemHang.Name = "mnuTimKiemHang";
-            this.mnuTimKiemHang.Size = new System.Drawing.Size(343, 54);
+            this.mnuTimKiemHang.Size = new System.Drawing.Size(448, 54);
             this.mnuTimKiemHang.Text = "Hàng";
             // 
             // mnuTimKiemKhachHang
             // 
             this.mnuTimKiemKhachHang.Name = "mnuTimKiemKhachHang";
-            this.mnuTimKiemKhachHang.Size = new System.Drawing.Size(343, 54);
+            this.mnuTimKiemKhachHang.Size = new System.Drawing.Size(448, 54);
             this.mnuTimKiemKhachHang.Text = "Khách Hàng";
             this.mnuTimKiemKhachHang.Click += new System.EventHandler(this.mnuTimKiemKhachHang_Click);
             // 
@@ -224,25 +225,25 @@ namespace BTL_QuanLyBanHang
             // mnuBCHangTon
             // 
             this.mnuBCHangTon.Name = "mnuBCHangTon";
-            this.mnuBCHangTon.Size = new System.Drawing.Size(448, 54);
+            this.mnuBCHangTon.Size = new System.Drawing.Size(339, 54);
             this.mnuBCHangTon.Text = "Hàng tồn";
             this.mnuBCHangTon.Click += new System.EventHandler(this.mnuBCHangTon_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(445, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(336, 6);
             // 
             // mnuBCDoanhThu
             // 
             this.mnuBCDoanhThu.Name = "mnuBCDoanhThu";
-            this.mnuBCDoanhThu.Size = new System.Drawing.Size(448, 54);
+            this.mnuBCDoanhThu.Size = new System.Drawing.Size(339, 54);
             this.mnuBCDoanhThu.Text = "Doanh thu";
             // 
             // mnuBCKhachHang
             // 
             this.mnuBCKhachHang.Name = "mnuBCKhachHang";
-            this.mnuBCKhachHang.Size = new System.Drawing.Size(448, 54);
+            this.mnuBCKhachHang.Size = new System.Drawing.Size(339, 54);
             this.mnuBCKhachHang.Text = "Khách hàng";
             this.mnuBCKhachHang.Click += new System.EventHandler(this.mnuBCKhachHang_Click);
             // 

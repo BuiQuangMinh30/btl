@@ -47,7 +47,7 @@ namespace BTL_QuanLyBanHang
             report.Load(fullPath);
             crvKhachHang.ReportSource = report;
             crvKhachHang.Refresh();
-            LoadReport();
+            //LoadReport();
             laydulieucombobox();
         }
         private void LoadReport()
@@ -66,8 +66,8 @@ namespace BTL_QuanLyBanHang
                 ReportKhachHang rptKhachHang = new ReportKhachHang();
                 rptKhachHang.SetDataSource(tb);
                 //Hiển thị báo cáo
-                crvKhachHang.ReportSource = rptKhachHang;
-                crvKhachHang.Refresh();
+                //crvKhachHang.ReportSource = rptKhachHang;
+                //crvKhachHang.Refresh();
             }
         }
 
@@ -156,6 +156,11 @@ namespace BTL_QuanLyBanHang
                     crvKhachHang.Refresh();
                 }
             }
+        }
+
+        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

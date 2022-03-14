@@ -67,8 +67,8 @@ namespace BTL_QuanLyBanHang
 
             txtMaNV.Text= dgrNhanVien.CurrentRow.Cells["sMaNhanVien"].Value.ToString();
             txtTenNV.Text = dgrNhanVien.CurrentRow.Cells["sTenNhanVien"].Value.ToString();
-            if (dgrNhanVien.CurrentRow.Cells["sGioiTinh"].Value.ToString() == "Nam") cbGioitinh.Checked = true;
-            else cbGioitinh.Checked = false;
+            //if (dgrNhanVien.CurrentRow.Cells["sGioiTinh"].Value.ToString() == "Nam") cbGioitinh.Checked = true;
+            //else cbGioitinh.Checked = false;
             txtDiaChiNV.Text = dgrNhanVien.CurrentRow.Cells["sDiaChi"].Value.ToString();
             mtbDienThoaiNV.Text = dgrNhanVien.CurrentRow.Cells["sDienThoai"].Value.ToString();
             dtpNgaySinh.Value = (DateTime)dgrNhanVien.CurrentRow.Cells["dNgaysinh"].Value;
@@ -93,7 +93,8 @@ namespace BTL_QuanLyBanHang
             txtMaNV.Text = "";
             txtTenNV.Text = "";
             txtDiaChiNV.Text = "";
-            cbGioitinh.Checked = false;
+            txtGioiTinh.Text = "";
+            //cbGioitinh.Checked = false;
             dtpNgaySinh.Value = DateTime.Now;
             mtbDienThoaiNV.Text = "";
         }
@@ -126,11 +127,16 @@ namespace BTL_QuanLyBanHang
                 mtbDienThoaiNV.Focus();
                 return;
             }
-
-            if (cbGioitinh.Checked == true)
-                gt = "Nam";
-            else
-                gt = "Nữ";
+            if (txtGioiTinh.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGioiTinh.Focus();
+                return;
+            }
+            //if (cbGioitinh.Checked == true)
+            //    gt = "Nam";
+            //else
+            //    gt = "Nữ";
 
             if (dtpNgaySinh.Text == "  /  /    ")
             {
@@ -154,14 +160,14 @@ namespace BTL_QuanLyBanHang
                 return;
             }
 
-            sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
-            if (Functions.CheckKey(sql))
-            {
-                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbDienThoaiNV.Focus();
-                mtbDienThoaiNV.Text = "";
-                return;
-            }
+            //sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
+            //if (Functions.CheckKey(sql))
+            //{
+            //    MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    mtbDienThoaiNV.Focus();
+            //    mtbDienThoaiNV.Text = "";
+            //    return;
+            //}
 
             string constr = ConfigurationManager.ConnectionStrings["btl_qlbh"].ConnectionString;
             using (SqlConnection cnn = new SqlConnection(constr))
@@ -173,7 +179,7 @@ namespace BTL_QuanLyBanHang
                     cmd.CommandText = "sp_tblNhanVien_Insert";
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
-                    cmd.Parameters.AddWithValue("@sGioiTinh", gt);
+                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinh.Text);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
                     cmd.Parameters.AddWithValue("@dNgaySinh", Functions.ConvertDateTime(dtpNgaySinh.Text));
@@ -241,10 +247,16 @@ namespace BTL_QuanLyBanHang
                 mtbDienThoaiNV.Focus();
                 return;
             }
-            if (cbGioitinh.Checked == true)
-                gt = "Nam";
-            else
-                gt = "Nữ";
+            if (txtGioiTinh.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn phải nhập giới tính", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGioiTinh.Focus();
+                return;
+            }
+            //if (cbGioitinh.Checked == true)
+            //    gt = "Nam";
+            //else
+            //    gt = "Nữ";
             if (dtpNgaySinh.Text == "  /  /    ")
             {
                 MessageBox.Show("Bạn phải nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -258,14 +270,14 @@ namespace BTL_QuanLyBanHang
                 dtpNgaySinh.Focus();
                 return;
             }
-            sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
-            if (Functions.CheckKey(sql))
-            {
-                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbDienThoaiNV.Focus();
-                mtbDienThoaiNV.Text = "";
-                return;
-            }
+            //sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
+            //if (Functions.CheckKey(sql))
+            //{
+            //    MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    mtbDienThoaiNV.Focus();
+            //    mtbDienThoaiNV.Text = "";
+            //    return;
+            //}
 
             string constr = ConfigurationManager.ConnectionStrings["btl_qlbh"].ConnectionString;
             using (SqlConnection cnn = new SqlConnection(constr))
@@ -277,7 +289,7 @@ namespace BTL_QuanLyBanHang
                     cmd.CommandText = "sp_tblNhanVien_Update";
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
-                    cmd.Parameters.AddWithValue("@sGioiTinh", gt);
+                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinh);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
                     cmd.Parameters.AddWithValue("@dNgaySinh", dtpNgaySinh.Text);
@@ -314,5 +326,7 @@ namespace BTL_QuanLyBanHang
                 ResetValue();
             }
         }
+
+       
     }
 }

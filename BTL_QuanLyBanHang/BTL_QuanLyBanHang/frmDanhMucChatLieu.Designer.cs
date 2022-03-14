@@ -57,16 +57,18 @@ namespace BTL_QuanLyBanHang
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 380);
+            this.panel1.Location = new System.Drawing.Point(0, 906);
+            this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 70);
+            this.panel1.Size = new System.Drawing.Size(2133, 167);
             this.panel1.TabIndex = 2;
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(691, 26);
+            this.btnDong.Location = new System.Drawing.Point(1843, 62);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(91, 29);
+            this.btnDong.Size = new System.Drawing.Size(243, 69);
             this.btnDong.TabIndex = 5;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -74,9 +76,10 @@ namespace BTL_QuanLyBanHang
             // 
             // btnBoQua
             // 
-            this.btnBoQua.Location = new System.Drawing.Point(557, 26);
+            this.btnBoQua.Location = new System.Drawing.Point(1485, 62);
+            this.btnBoQua.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(91, 29);
+            this.btnBoQua.Size = new System.Drawing.Size(243, 69);
             this.btnBoQua.TabIndex = 4;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
@@ -84,9 +87,10 @@ namespace BTL_QuanLyBanHang
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(423, 26);
+            this.btnLuu.Location = new System.Drawing.Point(1128, 62);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(91, 29);
+            this.btnLuu.Size = new System.Drawing.Size(243, 69);
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -94,9 +98,10 @@ namespace BTL_QuanLyBanHang
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(289, 26);
+            this.btnSua.Location = new System.Drawing.Point(771, 62);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(91, 29);
+            this.btnSua.Size = new System.Drawing.Size(243, 69);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -105,9 +110,10 @@ namespace BTL_QuanLyBanHang
             // btnXoa
             // 
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnXoa.Location = new System.Drawing.Point(155, 26);
+            this.btnXoa.Location = new System.Drawing.Point(413, 62);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(91, 29);
+            this.btnXoa.Size = new System.Drawing.Size(243, 69);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -115,9 +121,10 @@ namespace BTL_QuanLyBanHang
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(21, 26);
+            this.btnThem.Location = new System.Drawing.Point(56, 62);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(91, 29);
+            this.btnThem.Size = new System.Drawing.Size(243, 69);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -132,40 +139,45 @@ namespace BTL_QuanLyBanHang
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 115);
+            this.panel2.Size = new System.Drawing.Size(2133, 274);
             this.panel2.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 38);
+            this.label3.Location = new System.Drawing.Point(128, 91);
+            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(168, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã chất liệu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 75);
+            this.label2.Location = new System.Drawing.Point(128, 179);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(178, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên chất liệu";
             // 
             // txtTenChatLieu
             // 
-            this.txtTenChatLieu.Location = new System.Drawing.Point(155, 68);
+            this.txtTenChatLieu.Location = new System.Drawing.Point(413, 162);
+            this.txtTenChatLieu.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtTenChatLieu.Name = "txtTenChatLieu";
-            this.txtTenChatLieu.Size = new System.Drawing.Size(225, 20);
+            this.txtTenChatLieu.Size = new System.Drawing.Size(593, 38);
             this.txtTenChatLieu.TabIndex = 1;
             // 
             // txtMaChatLieu
             // 
-            this.txtMaChatLieu.Location = new System.Drawing.Point(155, 31);
+            this.txtMaChatLieu.Location = new System.Drawing.Point(413, 74);
+            this.txtMaChatLieu.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtMaChatLieu.Name = "txtMaChatLieu";
-            this.txtMaChatLieu.Size = new System.Drawing.Size(225, 20);
+            this.txtMaChatLieu.Size = new System.Drawing.Size(593, 38);
             this.txtMaChatLieu.TabIndex = 0;
             this.txtMaChatLieu.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMaChatLieu_KeyUp);
             // 
@@ -174,9 +186,10 @@ namespace BTL_QuanLyBanHang
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(299, 0);
+            this.label1.Location = new System.Drawing.Point(797, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 22);
+            this.label1.Size = new System.Drawing.Size(415, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh mục chất liệu";
             // 
@@ -184,21 +197,25 @@ namespace BTL_QuanLyBanHang
             // 
             this.dgrChatLieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrChatLieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgrChatLieu.Location = new System.Drawing.Point(0, 115);
+            this.dgrChatLieu.Location = new System.Drawing.Point(0, 274);
+            this.dgrChatLieu.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dgrChatLieu.Name = "dgrChatLieu";
-            this.dgrChatLieu.Size = new System.Drawing.Size(800, 265);
+            this.dgrChatLieu.RowHeadersWidth = 102;
+            this.dgrChatLieu.Size = new System.Drawing.Size(2133, 632);
             this.dgrChatLieu.TabIndex = 1;
             this.dgrChatLieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrChatLieu_CellClick);
             // 
             // frmDanhMucChatLieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2133, 1073);
             this.Controls.Add(this.dgrChatLieu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmDanhMucChatLieu";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Danh mục chất Llệu";
             this.Load += new System.EventHandler(this.frmDanhMucChatLieu_Load);
