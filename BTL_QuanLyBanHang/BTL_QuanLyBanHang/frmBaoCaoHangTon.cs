@@ -16,6 +16,7 @@ namespace BTL_QuanLyBanHang
 {
     public partial class frmBaoCaoHangTon : Form
     {
+        public string fullPath = @"E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\ReportHangTon.rpt";
         public frmBaoCaoHangTon()
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace BTL_QuanLyBanHang
         private void frmBaoCaoHangTon_Load(object sender, EventArgs e)
         {
             ReportDocument report = new ReportDocument();
-            report.Load(@"E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\ReportHangTon.rpt");
+            report.Load(fullPath);
             crvHangTon.ReportSource = report;
             crvHangTon.Refresh();
-            //LoadReport();
+            LoadReport();
         }
         private void LoadReport()
         {
@@ -51,7 +52,7 @@ namespace BTL_QuanLyBanHang
             
             string value = txtMaHang.Text;
             ReportDocument report = new ReportDocument();
-            report.Load(@"E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\ReportHangTon.rpt");
+            report.Load(fullPath);
             ParameterFieldDefinition rpd = report.DataDefinition.ParameterFields["sMaHang"];
             report.RecordSelectionFormula = "{tblHang.sMaHang} = {?sMaHang}";
             ParameterValues pv = new ParameterValues();
@@ -68,7 +69,7 @@ namespace BTL_QuanLyBanHang
         {
             string value = txtTenHang.Text;
             ReportDocument report = new ReportDocument();
-            report.Load(@"E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\ReportHangTon.rpt");
+            report.Load(fullPath);
             ParameterFieldDefinition rpd = report.DataDefinition.ParameterFields["TenHang"];
             report.RecordSelectionFormula = "{tblHang.sTenHang} = {?TenHang}";
             ParameterValues pv = new ParameterValues();

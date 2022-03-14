@@ -55,6 +55,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Functions.cs" />
+    <Compile Include="DataSet\dsBaoCaoQuanLy.cs">
+      <DependentUpon>dsBaoCaoQuanLy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\dsBaoCaoQuanLy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBaoCaoQuanLy.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsBaoCaoHangTon.cs">
       <DependentUpon>dsBaoCaoHangTon.xsd</DependentUpon>
     </Compile>
@@ -68,6 +76,18 @@
     </Compile>
     <Compile Include="frmBaoCaoHangTon.Designer.cs">
       <DependentUpon>frmBaoCaoHangTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoKhachHang.Designer.cs">
+      <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoQLHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoQLHD.Designer.cs">
+      <DependentUpon>frmBaoCaoQLHD.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDanhMucHangHoa.cs">
       <SubType>Form</SubType>
@@ -119,8 +139,26 @@
       <DependentUpon>ReportHangTon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\CRqlhd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRqlhd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportKhachHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportKhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="frmBaoCaoHangTon.resx">
       <DependentUpon>frmBaoCaoHangTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoKhachHang.resx">
+      <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoQLHD.resx">
+      <DependentUpon>frmBaoCaoQLHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhMucChatLieu.resx">
       <DependentUpon>frmDanhMucChatLieu.cs</DependentUpon>
@@ -157,6 +195,25 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportHangTon.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRqlhd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRqlhd.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportKhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportKhachHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSet\dsBaoCaoQuanLy.xsc">
+      <DependentUpon>dsBaoCaoQuanLy.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsBaoCaoQuanLy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBaoCaoQuanLy.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\dsBaoCaoQuanLy.xss">
+      <DependentUpon>dsBaoCaoQuanLy.xsd</DependentUpon>
+    </None>
     <None Include="dsBaoCaoHangTon.xsc">
       <DependentUpon>dsBaoCaoHangTon.xsd</DependentUpon>
     </None>
@@ -228,5 +285,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

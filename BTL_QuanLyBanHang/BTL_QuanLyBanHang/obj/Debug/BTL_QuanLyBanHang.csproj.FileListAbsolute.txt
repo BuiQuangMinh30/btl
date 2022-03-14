@@ -36,3 +36,43 @@ E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\stdole.dll
 E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoHangTon.resources
 E:\Học C#\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.CopyComplete
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\BTL_QuanLyBanHang.exe.config
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\BTL_QuanLyBanHang.exe
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\BTL_QuanLyBanHang.pdb
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\AxShockwaveFlashObjects.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.Shared.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.Windows.Forms.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\ShockwaveFlashObjects.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\stdole.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.AssemblyReference.cache
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.ResolveComReference.cache
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoHangTon.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucChatLieu.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucHangHoa.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucKhachHang.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmDanhMucNhanVien.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmHoaDonBan.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmMain.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.Properties.Resources.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmTimKiemKhach.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.GenerateResource.cache
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.CoreCompileInputs.cache
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.CopyComplete
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.exe
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.pdb
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoQLHD.resources
+E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoKhachHang.resources

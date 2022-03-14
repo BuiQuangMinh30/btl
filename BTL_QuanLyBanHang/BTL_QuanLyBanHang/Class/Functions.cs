@@ -17,9 +17,9 @@ namespace BTL_QuanLyBanHang.Class
         public static void Connect()
         {
             con = new SqlConnection();    //Khởi tạo đối tượng
-            con.ConnectionString = @"Data Source=DESKTOP-VFMJLSI\SQLEXPRESS01;Initial Catalog=BTL_QLBanHang;Integrated Security=True";
-            
-            if(con.State != ConnectionState.Open)
+            con.ConnectionString = @"Data Source=DESKTOP-8GD1V6M;Initial Catalog=BTL_QuanLyBanHang;Integrated Security=True";
+
+            if (con.State != ConnectionState.Open)
             {
                 con.Open();         
                 MessageBox.Show("Kết nối thành công!");
@@ -90,6 +90,22 @@ namespace BTL_QuanLyBanHang.Class
             {
                 return false;
             }
+        }
+        public static bool IsDate(string date)
+        {
+            string[] elements = date.Split('/');
+            if ((Convert.ToInt32(elements[0]) >= 1) && (Convert.ToInt32(elements[0]) <= 12) &&
+                (Convert.ToInt32(elements[1]) >= 1) && (Convert.ToInt32(elements[1]) <= 31) &&
+                (Convert.ToInt32(elements[2]) >= 1900) && (Convert.ToInt32(elements[2]) <= 2004))
+                return true;
+            else return false;
+        }
+
+        public static string ConvertDateTime(string date)
+        {
+            string[] elements = date.Split('/');
+            string dt = string.Format("{0}/{1}/{2}", elements[0], elements[1], elements[2]);
+            return dt;
         }
     }
 }

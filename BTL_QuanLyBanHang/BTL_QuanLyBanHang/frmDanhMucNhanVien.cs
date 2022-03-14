@@ -67,7 +67,8 @@ namespace BTL_QuanLyBanHang
 
             txtMaNV.Text= dgrNhanVien.CurrentRow.Cells["sMaNhanVien"].Value.ToString();
             txtTenNV.Text = dgrNhanVien.CurrentRow.Cells["sTenNhanVien"].Value.ToString();
-            txtGioiTinhNV.Text = dgrNhanVien.CurrentRow.Cells["sGioiTinh"].Value.ToString();
+            if (dgrNhanVien.CurrentRow.Cells["sGioiTinh"].Value.ToString() == "Nam") cbGioitinh.Checked = true;
+            else cbGioitinh.Checked = false;
             txtDiaChiNV.Text = dgrNhanVien.CurrentRow.Cells["sDiaChi"].Value.ToString();
             mtbDienThoaiNV.Text = dgrNhanVien.CurrentRow.Cells["sDienThoai"].Value.ToString();
             dtpNgaySinh.Value = (DateTime)dgrNhanVien.CurrentRow.Cells["dNgaysinh"].Value;
@@ -92,7 +93,7 @@ namespace BTL_QuanLyBanHang
             txtMaNV.Text = "";
             txtTenNV.Text = "";
             txtDiaChiNV.Text = "";
-            txtGioiTinhNV.Text = "";
+            cbGioitinh.Checked = false;
             dtpNgaySinh.Value = DateTime.Now;
             mtbDienThoaiNV.Text = "";
         }
@@ -100,40 +101,47 @@ namespace BTL_QuanLyBanHang
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql;
-            if (txtMaNV.Text.Trim() == "")
+            string gt;
+            if (txtMaNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMaNV.Focus();
                 return;
             }
-
-            if (txtMaNV.Text.Trim().Length == 0)
+            if (txtTenNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTenNV.Focus();
                 return;
             }
-
-            if (txtDiaChiNV.Text.Trim() == "")
+            if (txtDiaChiNV.Text.Trim().Length == 0)
             {
-                MessageBox.Show("Bạn phải nhập địa chỉ nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDiaChiNV.Focus();
                 return;
             }
-
-            if (mtbDienThoaiNV.Text.Trim() == "(   )     -")
+            if (mtbDienThoaiNV.Text == "   -   -")
             {
-                MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtbDienThoaiNV.Focus();
                 return;
             }
 
-            string sql1 = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
-            if (Functions.CheckKey(sql1))
+            if (cbGioitinh.Checked == true)
+                gt = "Nam";
+            else
+                gt = "Nữ";
+
+            if (dtpNgaySinh.Text == "  /  /    ")
             {
-                MessageBox.Show("Số điện thoại nhân viên đã tồn tại, vui lòng nhập mã khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mtbDienThoaiNV.Focus();
-                mtbDienThoaiNV.Text = "";
+                MessageBox.Show("Bạn phải nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Focus();
+                return;
+            }
+            if (!Functions.IsDate(dtpNgaySinh.Text))
+            {
+                MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Focus();
                 return;
             }
 
@@ -146,8 +154,17 @@ namespace BTL_QuanLyBanHang
                 return;
             }
 
+            sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
+            if (Functions.CheckKey(sql))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbDienThoaiNV.Focus();
+                mtbDienThoaiNV.Text = "";
+                return;
+            }
+
             string constr = ConfigurationManager.ConnectionStrings["btl_qlbh"].ConnectionString;
-            using(SqlConnection cnn = new SqlConnection(constr))
+            using (SqlConnection cnn = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
@@ -156,25 +173,22 @@ namespace BTL_QuanLyBanHang
                     cmd.CommandText = "sp_tblNhanVien_Insert";
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
-                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinhNV.Text);
+                    cmd.Parameters.AddWithValue("@sGioiTinh", gt);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
-                    cmd.Parameters.AddWithValue("@dNgaySinh", dtpNgaySinh.Value);
-
+                    cmd.Parameters.AddWithValue("@dNgaySinh", Functions.ConvertDateTime(dtpNgaySinh.Text));
                     cnn.Open();
                     cmd.ExecuteNonQuery();
+                   
                     cnn.Close();
-
                     LoadDataGridViewNV();
-                    ResetValue();
-
-                    btnBoQua.Enabled = false;
-                    btnThem.Enabled = true;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
                 }
             }
+            ResetValue();                 //Xóa trắng
+            txtMaNV.Enabled = true; //Cho phép nhập mới
+            txtMaNV.Focus();
         }
+    
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
@@ -198,18 +212,17 @@ namespace BTL_QuanLyBanHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            string gt,sql;
             if (tbNV.Rows.Count == 0)
             {
-                MessageBox.Show("Không có bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            if(txtMaNV.Text.Trim() == "")
+            if (txtMaNV.Text == "")
             {
-                MessageBox.Show("Yêu cầu chọn bản ghi cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             if (txtTenNV.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -222,18 +235,35 @@ namespace BTL_QuanLyBanHang
                 txtDiaChiNV.Focus();
                 return;
             }
-
-            if (mtbDienThoaiNV.Text == "(   )     -")
+            if (mtbDienThoaiNV.Text == "   -   -")
             {
                 MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mtbDienThoaiNV.Focus();
                 return;
             }
-
-            if(txtGioiTinhNV.Text.Trim() != "Nam" && txtGioiTinhNV.Text.Trim() != "Nữ")
+            if (cbGioitinh.Checked == true)
+                gt = "Nam";
+            else
+                gt = "Nữ";
+            if (dtpNgaySinh.Text == "  /  /    ")
             {
-                MessageBox.Show("Chỉ được nhập giới tính Nam hoặc Nữ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGioiTinhNV.Focus();
+                MessageBox.Show("Bạn phải nhập ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Focus();
+                return;
+            }
+            if (!Functions.IsDate(dtpNgaySinh.Text))
+            {
+                MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Text = "";
+                dtpNgaySinh.Focus();
+                return;
+            }
+            sql = "select * from tblNhanVien where sDienThoai = N'" + mtbDienThoaiNV.Text + "'";
+            if (Functions.CheckKey(sql))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbDienThoaiNV.Focus();
+                mtbDienThoaiNV.Text = "";
                 return;
             }
 
@@ -247,66 +277,41 @@ namespace BTL_QuanLyBanHang
                     cmd.CommandText = "sp_tblNhanVien_Update";
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
-                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinhNV.Text);
+                    cmd.Parameters.AddWithValue("@sGioiTinh", gt);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
-                    cmd.Parameters.AddWithValue("@dNgaySinh", dtpNgaySinh.Value);
-
+                    cmd.Parameters.AddWithValue("@dNgaySinh", dtpNgaySinh.Text);
                     cnn.Open();
                     cmd.ExecuteNonQuery();
+                  
                     cnn.Close();
-
                     LoadDataGridViewNV();
+                    cnn.Close();
                     ResetValue();
-
                     btnBoQua.Enabled = false;
-                    btnThem.Enabled = true;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
                 }
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            string sql;
             if (tbNV.Rows.Count == 0)
             {
-                MessageBox.Show("Không có bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            if (txtMaNV.Text.Trim() == "")
+            if (txtMaNV.Text == "")
             {
-                MessageBox.Show("Yêu cầu chọn bản ghi cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            DialogResult ret = MessageBox.Show("Bạn có muốn xóa "+txtTenNV.Text+"!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(ret == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xoá bản ghi này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string constr = ConfigurationManager.ConnectionStrings["btl_qlbh"].ConnectionString;
-                using (SqlConnection cnn = new SqlConnection(constr))
-                {
-                    using (SqlCommand cmd = cnn.CreateCommand())
-                    {
-                        cmd.Connection = cnn;
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "sp_tblNhanVien_Delete";
-                        cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
-
-                        cnn.Open();
-                        cmd.ExecuteNonQuery();
-                        cnn.Close();
-
-                        LoadDataGridViewNV();
-                        ResetValue();
-
-                        btnBoQua.Enabled = false;
-                        btnThem.Enabled = true;
-                        btnSua.Enabled = true;
-                        btnXoa.Enabled = true;
-                    }
-                }
+                sql = "DELETE tblNhanVien WHERE sMaNhanVien=N'" + txtMaNV.Text + "'";
+                Functions.GetDataTable(sql);
+                LoadDataGridViewNV();
+                ResetValue();
             }
         }
     }

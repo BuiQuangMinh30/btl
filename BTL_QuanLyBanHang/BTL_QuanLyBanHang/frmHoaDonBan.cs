@@ -385,5 +385,11 @@ namespace BTL_QuanLyBanHang
             Functions.FillComBoBox("SELECT sMaHDBan FROM tblHoaDonBan", cboMaHD, "sMaHDBan", "sMaHDBan");
             cboMaHD.SelectedIndex = -1;
         }
+
+        private void btnThemKH_Click(object sender, EventArgs e)
+        {
+            frmDanhMucKhachHang frmHDBan = new frmDanhMucKhachHang();
+            frmHDBan.Show();
+        }
     }
 }

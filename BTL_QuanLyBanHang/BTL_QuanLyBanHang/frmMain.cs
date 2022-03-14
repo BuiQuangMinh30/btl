@@ -89,5 +89,19 @@ namespace BTL_QuanLyBanHang
             frmBCHT.MdiParent = this;
             frmBCHT.Show();
         }
+
+        private void mnuQuanLy_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoQLHD frmBaoCao = new frmBaoCaoQLHD();
+            frmBaoCao.MdiParent = this;
+            frmBaoCao.Show();
+        }
+
+        private void mnuBCKhachHang_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoKhachHang frmBaoCao = new frmBaoCaoKhachHang();
+            frmBaoCao.MdiParent = this;
+            frmBaoCao.Show();
+        }
     }
 }

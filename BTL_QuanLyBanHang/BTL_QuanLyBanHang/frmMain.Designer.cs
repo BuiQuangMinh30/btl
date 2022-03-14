@@ -43,6 +43,7 @@ namespace BTL_QuanLyBanHang
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuHoaDon = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHoaDonBan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuQuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTimKiemHoaDon = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTimKiemHang = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,7 @@ namespace BTL_QuanLyBanHang
             this.mnuBCHangTon = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuBCDoanhThu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBCKhachHang = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHienTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVaiNet = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +61,8 @@ namespace BTL_QuanLyBanHang
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFile,
             this.mnuDanhMuc,
@@ -68,7 +72,8 @@ namespace BTL_QuanLyBanHang
             this.mnuTroGiup});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
+            this.menuStrip1.Size = new System.Drawing.Size(2133, 58);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,14 +82,14 @@ namespace BTL_QuanLyBanHang
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuThoat});
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(55, 20);
+            this.mnuFile.Size = new System.Drawing.Size(134, 48);
             this.mnuFile.Text = "&Tệp tin";
             // 
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.mnuThoat.Size = new System.Drawing.Size(146, 22);
+            this.mnuThoat.Size = new System.Drawing.Size(366, 54);
             this.mnuThoat.Text = "Thoát";
             this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
@@ -100,7 +105,7 @@ namespace BTL_QuanLyBanHang
             this.mnuHangHoa,
             this.toolStripSeparator4});
             this.mnuDanhMuc.Name = "mnuDanhMuc";
-            this.mnuDanhMuc.Size = new System.Drawing.Size(74, 20);
+            this.mnuDanhMuc.Size = new System.Drawing.Size(177, 48);
             this.mnuDanhMuc.Text = "&Danh mục";
             // 
             // mnuChatLieu
@@ -108,65 +113,73 @@ namespace BTL_QuanLyBanHang
             this.mnuChatLieu.Image = global::BTL_QuanLyBanHang.Properties.Resources.add_file;
             this.mnuChatLieu.Name = "mnuChatLieu";
             this.mnuChatLieu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.mnuChatLieu.Size = new System.Drawing.Size(163, 22);
+            this.mnuChatLieu.Size = new System.Drawing.Size(404, 54);
             this.mnuChatLieu.Text = "&Chất liệu";
             this.mnuChatLieu.Click += new System.EventHandler(this.mnuChatLieu_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(401, 6);
             // 
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(163, 22);
+            this.mnuNhanVien.Size = new System.Drawing.Size(404, 54);
             this.mnuNhanVien.Text = "&Nhân viên";
             this.mnuNhanVien.Click += new System.EventHandler(this.mnuNhanVien_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(401, 6);
             // 
             // mnuKhachHang
             // 
             this.mnuKhachHang.Name = "mnuKhachHang";
-            this.mnuKhachHang.Size = new System.Drawing.Size(163, 22);
+            this.mnuKhachHang.Size = new System.Drawing.Size(404, 54);
             this.mnuKhachHang.Text = "&Khách hàng";
             this.mnuKhachHang.Click += new System.EventHandler(this.mnuKhachHang_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(401, 6);
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(163, 22);
+            this.mnuHangHoa.Size = new System.Drawing.Size(404, 54);
             this.mnuHangHoa.Text = "&Hàng hóa";
             this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(160, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(401, 6);
             // 
             // mnuHoaDon
             // 
             this.mnuHoaDon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuHoaDonBan});
+            this.mnuHoaDonBan,
+            this.mnuQuanLy});
             this.mnuHoaDon.Name = "mnuHoaDon";
-            this.mnuHoaDon.Size = new System.Drawing.Size(65, 20);
+            this.mnuHoaDon.Size = new System.Drawing.Size(157, 48);
             this.mnuHoaDon.Text = "&Hóa đơn";
             // 
             // mnuHoaDonBan
             // 
             this.mnuHoaDonBan.Name = "mnuHoaDonBan";
-            this.mnuHoaDonBan.Size = new System.Drawing.Size(180, 22);
+            this.mnuHoaDonBan.Size = new System.Drawing.Size(404, 54);
             this.mnuHoaDonBan.Text = "Hóa đơn bán";
             this.mnuHoaDonBan.Click += new System.EventHandler(this.mnuHoaDonBan_Click);
+            // 
+            // mnuQuanLy
+            // 
+            this.mnuQuanLy.Name = "mnuQuanLy";
+            this.mnuQuanLy.Size = new System.Drawing.Size(404, 54);
+            this.mnuQuanLy.Text = "Hoá đơn quản lý";
+            this.mnuQuanLy.Click += new System.EventHandler(this.mnuQuanLy_Click);
             // 
             // mnuTimKiem
             // 
@@ -175,25 +188,25 @@ namespace BTL_QuanLyBanHang
             this.mnuTimKiemHang,
             this.mnuTimKiemKhachHang});
             this.mnuTimKiem.Name = "mnuTimKiem";
-            this.mnuTimKiem.Size = new System.Drawing.Size(68, 20);
+            this.mnuTimKiem.Size = new System.Drawing.Size(163, 48);
             this.mnuTimKiem.Text = "Tìm kiếm";
             // 
             // mnuTimKiemHoaDon
             // 
             this.mnuTimKiemHoaDon.Name = "mnuTimKiemHoaDon";
-            this.mnuTimKiemHoaDon.Size = new System.Drawing.Size(180, 22);
+            this.mnuTimKiemHoaDon.Size = new System.Drawing.Size(343, 54);
             this.mnuTimKiemHoaDon.Text = "Hóa đơn";
             // 
             // mnuTimKiemHang
             // 
             this.mnuTimKiemHang.Name = "mnuTimKiemHang";
-            this.mnuTimKiemHang.Size = new System.Drawing.Size(180, 22);
+            this.mnuTimKiemHang.Size = new System.Drawing.Size(343, 54);
             this.mnuTimKiemHang.Text = "Hàng";
             // 
             // mnuTimKiemKhachHang
             // 
             this.mnuTimKiemKhachHang.Name = "mnuTimKiemKhachHang";
-            this.mnuTimKiemKhachHang.Size = new System.Drawing.Size(180, 22);
+            this.mnuTimKiemKhachHang.Size = new System.Drawing.Size(343, 54);
             this.mnuTimKiemKhachHang.Text = "Khách Hàng";
             this.mnuTimKiemKhachHang.Click += new System.EventHandler(this.mnuTimKiemKhachHang_Click);
             // 
@@ -202,28 +215,36 @@ namespace BTL_QuanLyBanHang
             this.mnuBaoCao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuBCHangTon,
             this.toolStripSeparator5,
-            this.mnuBCDoanhThu});
+            this.mnuBCDoanhThu,
+            this.mnuBCKhachHang});
             this.mnuBaoCao.Name = "mnuBaoCao";
-            this.mnuBaoCao.Size = new System.Drawing.Size(61, 20);
+            this.mnuBaoCao.Size = new System.Drawing.Size(147, 48);
             this.mnuBaoCao.Text = "Báo cáo";
             // 
             // mnuBCHangTon
             // 
             this.mnuBCHangTon.Name = "mnuBCHangTon";
-            this.mnuBCHangTon.Size = new System.Drawing.Size(180, 22);
+            this.mnuBCHangTon.Size = new System.Drawing.Size(448, 54);
             this.mnuBCHangTon.Text = "Hàng tồn";
             this.mnuBCHangTon.Click += new System.EventHandler(this.mnuBCHangTon_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(445, 6);
             // 
             // mnuBCDoanhThu
             // 
             this.mnuBCDoanhThu.Name = "mnuBCDoanhThu";
-            this.mnuBCDoanhThu.Size = new System.Drawing.Size(180, 22);
+            this.mnuBCDoanhThu.Size = new System.Drawing.Size(448, 54);
             this.mnuBCDoanhThu.Text = "Doanh thu";
+            // 
+            // mnuBCKhachHang
+            // 
+            this.mnuBCKhachHang.Name = "mnuBCKhachHang";
+            this.mnuBCKhachHang.Size = new System.Drawing.Size(448, 54);
+            this.mnuBCKhachHang.Text = "Khách hàng";
+            this.mnuBCKhachHang.Click += new System.EventHandler(this.mnuBCKhachHang_Click);
             // 
             // mnuTroGiup
             // 
@@ -231,29 +252,30 @@ namespace BTL_QuanLyBanHang
             this.mnuHienTroGiup,
             this.mnuVaiNet});
             this.mnuTroGiup.Name = "mnuTroGiup";
-            this.mnuTroGiup.Size = new System.Drawing.Size(62, 20);
+            this.mnuTroGiup.Size = new System.Drawing.Size(151, 48);
             this.mnuTroGiup.Text = "Trợ giúp";
             // 
             // mnuHienTroGiup
             // 
             this.mnuHienTroGiup.Name = "mnuHienTroGiup";
-            this.mnuHienTroGiup.Size = new System.Drawing.Size(117, 22);
+            this.mnuHienTroGiup.Size = new System.Drawing.Size(293, 54);
             this.mnuHienTroGiup.Text = "Trợ giúp";
             // 
             // mnuVaiNet
             // 
             this.mnuVaiNet.Name = "mnuVaiNet";
-            this.mnuVaiNet.Size = new System.Drawing.Size(117, 22);
+            this.mnuVaiNet.Size = new System.Drawing.Size(293, 54);
             this.mnuVaiNet.Text = "Vài nét";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2133, 1073);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmMain";
             this.Text = "Chương trình quản lý bán vật liệu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
@@ -292,6 +314,8 @@ namespace BTL_QuanLyBanHang
         private System.Windows.Forms.ToolStripMenuItem mnuBCDoanhThu;
         private System.Windows.Forms.ToolStripMenuItem mnuHienTroGiup;
         private System.Windows.Forms.ToolStripMenuItem mnuVaiNet;
+        private System.Windows.Forms.ToolStripMenuItem mnuQuanLy;
+        private System.Windows.Forms.ToolStripMenuItem mnuBCKhachHang;
     }
 }
 

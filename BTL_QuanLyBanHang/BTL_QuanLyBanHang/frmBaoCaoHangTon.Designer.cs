@@ -33,11 +33,11 @@ namespace BTL_QuanLyBanHang
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtMaHang = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTenHang = new System.Windows.Forms.TextBox();
             this.btnLocTen = new System.Windows.Forms.Button();
+            this.txtTenHang = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaHang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,24 +49,28 @@ namespace BTL_QuanLyBanHang
             this.crvHangTon.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvHangTon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvHangTon.Location = new System.Drawing.Point(0, 0);
+            this.crvHangTon.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.crvHangTon.Name = "crvHangTon";
-            this.crvHangTon.Size = new System.Drawing.Size(800, 433);
+            this.crvHangTon.Size = new System.Drawing.Size(2133, 1033);
             this.crvHangTon.TabIndex = 0;
+            this.crvHangTon.ToolPanelWidth = 533;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.crvHangTon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 433);
+            this.panel1.Size = new System.Drawing.Size(2133, 1033);
             this.panel1.TabIndex = 1;
             // 
             // btnLoc
             // 
-            this.btnLoc.Location = new System.Drawing.Point(147, 45);
+            this.btnLoc.Location = new System.Drawing.Point(392, 107);
+            this.btnLoc.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(75, 32);
+            this.btnLoc.Size = new System.Drawing.Size(200, 76);
             this.btnLoc.TabIndex = 2;
             this.btnLoc.Text = "Lọc dữ liệu";
             this.btnLoc.UseVisualStyleBackColor = true;
@@ -81,60 +85,67 @@ namespace BTL_QuanLyBanHang
             this.panel2.Controls.Add(this.txtMaHang);
             this.panel2.Controls.Add(this.btnLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 353);
+            this.panel2.Location = new System.Drawing.Point(0, 842);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 80);
+            this.panel2.Size = new System.Drawing.Size(2133, 191);
             this.panel2.TabIndex = 2;
-            // 
-            // txtMaHang
-            // 
-            this.txtMaHang.Location = new System.Drawing.Point(97, 14);
-            this.txtMaHang.Name = "txtMaHang";
-            this.txtMaHang.Size = new System.Drawing.Size(208, 20);
-            this.txtMaHang.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Mã cần tìm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(487, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tên cần lọc";
-            // 
-            // txtTenHang
-            // 
-            this.txtTenHang.Location = new System.Drawing.Point(575, 9);
-            this.txtTenHang.Name = "txtTenHang";
-            this.txtTenHang.Size = new System.Drawing.Size(167, 20);
-            this.txtTenHang.TabIndex = 6;
             // 
             // btnLocTen
             // 
-            this.btnLocTen.Location = new System.Drawing.Point(634, 45);
+            this.btnLocTen.Location = new System.Drawing.Point(1691, 107);
+            this.btnLocTen.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnLocTen.Name = "btnLocTen";
-            this.btnLocTen.Size = new System.Drawing.Size(75, 23);
+            this.btnLocTen.Size = new System.Drawing.Size(200, 55);
             this.btnLocTen.TabIndex = 7;
             this.btnLocTen.Text = "Lọc theo tên";
             this.btnLocTen.UseVisualStyleBackColor = true;
             this.btnLocTen.Click += new System.EventHandler(this.btnLocTen_Click);
             // 
+            // txtTenHang
+            // 
+            this.txtTenHang.Location = new System.Drawing.Point(1533, 21);
+            this.txtTenHang.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtTenHang.Name = "txtTenHang";
+            this.txtTenHang.Size = new System.Drawing.Size(439, 38);
+            this.txtTenHang.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1299, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Tên cần lọc";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Mã cần tìm";
+            // 
+            // txtMaHang
+            // 
+            this.txtMaHang.Location = new System.Drawing.Point(259, 33);
+            this.txtMaHang.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtMaHang.Name = "txtMaHang";
+            this.txtMaHang.Size = new System.Drawing.Size(548, 38);
+            this.txtMaHang.TabIndex = 3;
+            // 
             // frmBaoCaoHangTon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 433);
+            this.ClientSize = new System.Drawing.Size(2133, 1033);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmBaoCaoHangTon";
             this.Text = "frmBaoCaoHangTon";
             this.Load += new System.EventHandler(this.frmBaoCaoHangTon_Load);

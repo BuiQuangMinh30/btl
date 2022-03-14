@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using BTL_QuanLyBanHang.Class;
-using System.Data;
 using System.Configuration;
 
 namespace BTL_QuanLyBanHang
 {
     public partial class frmDanhMucKhachHang : Form
     {
-        DataTable tblKH;
+        public DataTable tblKH;
         public frmDanhMucKhachHang()
         {
             InitializeComponent();
@@ -52,7 +51,7 @@ namespace BTL_QuanLyBanHang
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(btnThem.Enabled = false)
+            if(btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở trạng thái thêm mới", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMaKh.Focus();
@@ -73,6 +72,13 @@ namespace BTL_QuanLyBanHang
             btnXoa.Enabled = true;
             btnBoQua.Enabled = true;
         }
+        private void ResetValues()
+        {
+            txtMaKh.Text = "";
+            txtTenKh.Text = "";
+            txtDiaChiKh.Text = "";
+            mtbDienThoaiKh.Text = "";
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -84,14 +90,6 @@ namespace BTL_QuanLyBanHang
             ResetValues();
             txtMaKh.Enabled = true;
             txtMaKh.Focus();
-        }
-
-        private void ResetValues()
-        {
-            txtMaKh.Text = "";
-            txtTenKh.Text = "";
-            txtDiaChiKh.Text = "";
-            mtbDienThoaiKh.Text = "";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -118,7 +116,7 @@ namespace BTL_QuanLyBanHang
                 return;
             }
 
-            if (mtbDienThoaiKh.Text == "(  )    -")
+            if (mtbDienThoaiKh.Text == "   -   -")
             {
                 MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mtbDienThoaiKh.Focus();
@@ -133,6 +131,14 @@ namespace BTL_QuanLyBanHang
                 txtMaKh.Focus();
                 return;
             }
+            sql = "select * from tblKhach where sDienThoai = N'" + mtbDienThoaiKh.Text + "'";
+            if (Functions.CheckKey(sql))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbDienThoaiKh.Focus();
+                mtbDienThoaiKh.Text = "";
+                return;
+            }
 
             //Thêm dữ liệu
             string constr = ConfigurationManager.ConnectionStrings["btl_qlbh"].ConnectionString;
@@ -142,25 +148,22 @@ namespace BTL_QuanLyBanHang
                 {
                     cmd.Connection = cnn;
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_tblKhach_Insert";
+                    cmd.CommandText = "sp_tblKhach_Insert"; 
                     cmd.Parameters.AddWithValue("@sMaKhach", txtMaKh.Text);
                     cmd.Parameters.AddWithValue("@sTenKhach", txtTenKh.Text);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiKh.Text);
-                    cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiKh.Text.Trim());
+                    cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiKh.Text);
 
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
                     LoadDataGridViewKH();
-                    ResetValues();
-
-                    btnThem.Enabled = true;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
-                    btnBoQua.Enabled = false;
-                    btnLuu.Enabled = false;
+                    ResetValues();                 //Xóa trắng
+                    txtMaKh.Enabled = true; //Cho phép nhập mới
+                    txtMaKh.Focus();
                 }
             }
+            
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
@@ -253,10 +256,19 @@ namespace BTL_QuanLyBanHang
                 return;
             }
 
-            if (mtbDienThoaiKh.Text.Trim() == "(   )     -")
+            if (mtbDienThoaiKh.Text.Trim() == "   -   -")
             {
                 MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mtbDienThoaiKh.Focus();
+                return;
+            }
+            string sql;
+            sql = "select * from tblKhach where sDienThoai = N'" + mtbDienThoaiKh.Text + "'";
+            if (Functions.CheckKey(sql))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại, vui lòng nhập số điện thoại khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtbDienThoaiKh.Focus();
+                mtbDienThoaiKh.Text = "";
                 return;
             }
 
