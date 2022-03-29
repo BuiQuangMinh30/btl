@@ -37,6 +37,7 @@ namespace BTL_QuanLyBanHang
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mtbDienThoaiNV = new System.Windows.Forms.MaskedTextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace BTL_QuanLyBanHang
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgrNhanVien = new System.Windows.Forms.DataGridView();
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrNhanVien)).BeginInit();
@@ -159,6 +159,14 @@ namespace BTL_QuanLyBanHang
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2133, 355);
             this.panel2.TabIndex = 1;
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(339, 225);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(420, 38);
+            this.txtGioiTinh.TabIndex = 8;
             // 
             // label4
             // 
@@ -287,15 +295,6 @@ namespace BTL_QuanLyBanHang
             this.dgrNhanVien.Size = new System.Drawing.Size(2133, 484);
             this.dgrNhanVien.TabIndex = 2;
             this.dgrNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrNhanVien_CellClick);
-            // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(339, 225);
-            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(420, 38);
-            this.txtGioiTinh.TabIndex = 8;
-            //this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmDanhMucNhanVien
             // 

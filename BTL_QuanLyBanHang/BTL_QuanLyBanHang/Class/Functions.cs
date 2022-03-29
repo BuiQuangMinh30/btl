@@ -22,7 +22,7 @@ namespace BTL_QuanLyBanHang.Class
             if (con.State != ConnectionState.Open)
             {
                 con.Open();         
-                MessageBox.Show("Kết nối thành công!");
+                MessageBox.Show("Đăng nhập thành công!");
             }
             else
             {

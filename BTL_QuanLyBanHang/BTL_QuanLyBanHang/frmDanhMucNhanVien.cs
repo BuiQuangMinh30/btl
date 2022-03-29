@@ -67,8 +67,6 @@ namespace BTL_QuanLyBanHang
 
             txtMaNV.Text= dgrNhanVien.CurrentRow.Cells["sMaNhanVien"].Value.ToString();
             txtTenNV.Text = dgrNhanVien.CurrentRow.Cells["sTenNhanVien"].Value.ToString();
-            //if (dgrNhanVien.CurrentRow.Cells["sGioiTinh"].Value.ToString() == "Nam") cbGioitinh.Checked = true;
-            //else cbGioitinh.Checked = false;
             txtDiaChiNV.Text = dgrNhanVien.CurrentRow.Cells["sDiaChi"].Value.ToString();
             mtbDienThoaiNV.Text = dgrNhanVien.CurrentRow.Cells["sDienThoai"].Value.ToString();
             dtpNgaySinh.Value = (DateTime)dgrNhanVien.CurrentRow.Cells["dNgaysinh"].Value;
@@ -101,8 +99,8 @@ namespace BTL_QuanLyBanHang
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            string sql;
-            string gt;
+            string sql = "";
+            string gt= "";
             if (txtMaNV.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -133,10 +131,12 @@ namespace BTL_QuanLyBanHang
                 txtGioiTinh.Focus();
                 return;
             }
-            //if (cbGioitinh.Checked == true)
+            //if (rdNam.Checked == true)
             //    gt = "Nam";
-            //else
+            //else if (rdNu.Checked == true)
             //    gt = "Nữ";
+            //else
+            //    gt = "Khác";
 
             if (dtpNgaySinh.Text == "  /  /    ")
             {
@@ -180,6 +180,7 @@ namespace BTL_QuanLyBanHang
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
                     cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinh.Text);
+                    //cmd.Parameters.AddWithValue("@sGioiTinh", gt);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
                     cmd.Parameters.AddWithValue("@dNgaySinh", Functions.ConvertDateTime(dtpNgaySinh.Text));
@@ -218,7 +219,7 @@ namespace BTL_QuanLyBanHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string gt,sql;
+            string gt, sql;
             if (tbNV.Rows.Count == 0)
             {
                 MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -289,7 +290,7 @@ namespace BTL_QuanLyBanHang
                     cmd.CommandText = "sp_tblNhanVien_Update";
                     cmd.Parameters.AddWithValue("@sMaNhanVien", txtMaNV.Text);
                     cmd.Parameters.AddWithValue("@sTenNhanVien", txtTenNV.Text);
-                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinh);
+                    cmd.Parameters.AddWithValue("@sGioiTinh", txtGioiTinh.Text);
                     cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChiNV.Text);
                     cmd.Parameters.AddWithValue("@sDienThoai", mtbDienThoaiNV.Text);
                     cmd.Parameters.AddWithValue("@dNgaySinh", dtpNgaySinh.Text);
@@ -327,6 +328,9 @@ namespace BTL_QuanLyBanHang
             }
         }
 
-       
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
