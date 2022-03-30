@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using BTL_QuanLyBanHang.Class;
 using System.Configuration;
+using BTL_QuanLyBanHang.BaoCaoReport;
 
 namespace BTL_QuanLyBanHang
 {
@@ -299,5 +300,11 @@ namespace BTL_QuanLyBanHang
                 }
             }
         }
+
+        //private void btnIn_Click(object sender, EventArgs e)
+        //{
+        //    frmBaoCaoHoaDon frmBaoCao = new frmBaoCaoHoaDon();
+        //    frmBaoCao.Show();
+        //}
     }
 }

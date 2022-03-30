@@ -73,7 +73,6 @@ E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.Co
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.csproj.CopyComplete
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.exe
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.pdb
-E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.frmBaoCaoKhachHang.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.BaoCaoReport.frmBaoCaoHoaDon.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.Account.frmLogin.resources
 E:\btl\BTL_QuanLyBanHang\BTL_QuanLyBanHang\obj\Debug\BTL_QuanLyBanHang.Account.frmSignUp.resources

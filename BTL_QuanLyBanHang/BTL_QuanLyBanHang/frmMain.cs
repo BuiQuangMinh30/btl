@@ -100,7 +100,7 @@ namespace BTL_QuanLyBanHang
 
         private void mnuBCKhachHang_Click(object sender, EventArgs e)
         {
-            frmBaoCaoKhachHang frmBaoCao = new frmBaoCaoKhachHang();
+            frmBaoCaoHoaDon frmBaoCao = new frmBaoCaoHoaDon();
             frmBaoCao.MdiParent = this;
             frmBaoCao.Show();
         }
